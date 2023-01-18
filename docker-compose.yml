@@ -1,0 +1,27 @@
+version: "3"
+services:
+  spring-security-example-app:
+    build: .
+    container_name: spring-security-example-app
+    ports:
+      - "8080:8080"
+    links:
+      - spring-security-example-db
+    depends_on:
+      - spring-security-example-db
+
+  spring-security-example-db:
+    image: postgres
+    container_name: spring-security-example-db
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=1234
+      - POSTGRES_DB=spring-security-db
+    volumes:
+      - pgdata:/data/postgres
+
+volumes:
+  pgdata:
+    driver: local
