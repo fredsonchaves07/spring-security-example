@@ -2,10 +2,7 @@ package com.fredson.springsecutiryexample.modules.product.entities;
 
 import lombok.Data;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.util.UUID;
 
 @Entity
@@ -17,9 +14,9 @@ public class Product {
     @GeneratedValue
     private UUID id;
 
+    @Column(nullable = false)
     private String name;
 
+    @Column(nullable = false)
     private String description;
-
-    private String sku;
 }

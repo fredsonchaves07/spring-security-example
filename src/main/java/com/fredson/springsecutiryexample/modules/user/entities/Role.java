@@ -4,10 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.util.UUID;
 
 @Entity
@@ -21,6 +18,7 @@ public class Role {
     @GeneratedValue
     private UUID id;
 
+    @Column(nullable = false)
     private String name;
 
     public Role(UUID id) {

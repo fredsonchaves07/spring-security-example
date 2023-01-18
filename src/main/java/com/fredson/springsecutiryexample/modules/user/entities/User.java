@@ -19,10 +19,13 @@ public class User {
     @GeneratedValue
     private UUID id;
 
+    @Column(nullable = false)
     private String name;
 
+    @Column(nullable = false)
     private String username;
 
+    @Column(nullable = false)
     private String password;
 
     @ManyToMany
