@@ -1,4 +1,4 @@
-package com.fredson.springsecutiryexample.modules.config;
+package com.fredson.springsecutiryexample.config;
 
 import com.fredson.springsecutiryexample.security.CustomUserDetailsService;
 import lombok.RequiredArgsConstructor;

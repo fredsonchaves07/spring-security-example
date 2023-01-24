@@ -23,7 +23,7 @@ public class CreateUserRoleService {
         if(userExists.isEmpty()) throw new Error("User does not exists!");
         roles = createUserRoleDTO.getIdsRoles().stream().map(Role::new).collect(Collectors.toList());
         User user = userExists.get();
-        user.setRoles(roles);
+//        user.setRoles(roles);
         userRepository.save(user);
         return user;
     }
